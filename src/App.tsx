@@ -1,21 +1,17 @@
-import './App.css'
+import "./App.css";
+import { TaskCard } from "./TaskCard";
 
 function App() {
-  const title = "Do Search"
-  const id = "BUS-15"
-  const point = "1"
+  const title = "Do Search";
+  const id = "BUS-15";
+  const point = "1";
 
   return (
-    <div className='bg-gray-50 border rounded-lg px-2 m-2'>
-      <div className='text-base font-semibold py-2'>
-        {title}
-      </div>
-      <div className='flex gap-4 justify-between text-gray-700 py-2'>
-        <div>{id}</div>
-        <div>{point}</div>
-      </div>
-    </div>
-  )
+    <>
+      <TaskCard id={id} point={point} title={title} />
+      <TaskCard id="BUS-16" point="5" title="Just Do SOme Shit bro" />
+    </>
+  );
 }
 
-export default App
+export default App;
