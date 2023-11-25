@@ -11,7 +11,11 @@ export function TaskCard({
   const [isEditing, setIsEditing] = useState(false);
 
   return (
-    <div className="bg-gray-50 border rounded-lg px-2 m-2">
+    <div
+      className="bg-gray-50 border rounded-lg px-2 m-2"
+      draggable
+      onDragStart={(e) => e.dataTransfer.setData("id", task.id)}
+    >
       <div className="text-base font-base py-2"></div>
       {isEditing ? (
         <input
@@ -19,7 +23,7 @@ export function TaskCard({
           className="w-full"
           onBlur={() => setIsEditing(false)}
           value={task.title}
-          onChange={(e)=>updateTask({...task,title: e.target.value})}
+          onChange={(e) => updateTask({ ...task, title: e.target.value })}
         />
       ) : (
         <div className="" onClick={() => setIsEditing(true)}>
