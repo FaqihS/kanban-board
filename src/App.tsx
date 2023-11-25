@@ -1,6 +1,6 @@
 import "./App.css";
-import { TaskCard } from "./TaskCard";
-import { Task } from "./data-task";
+import { TaskCard } from "./components/TaskCard";
+import { Task } from "./utils/data-task";
 
 
 function App() {
