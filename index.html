@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,8 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
   </head>
-  <body>
-    <div id="root"></div>
+  <body class=" flex-col from-slate-200 h-full to-gray-300 bg-gradient-to-tr">
+    <header
+      class="sticky top-0 z-40 font-semibold text-slate-700 w-full backdrop-blur flex items-center px-6 py-2 justify-between transition-colors duration-500 border-slate-50/[0.06] supports-backdrop-blur:bg-white/95 bg-slate-900/10"
+    >
+      <div class="">
+
+        <h1 class="font-extrabold text-4xl   from-pink-500 to-violet-500 tracking-tight bg-gradient-to-r bg-clip-text text-transparent">Logo</h1>
+      </div>
+
+      <div class="flex gap-20 1">
+        <nav class="flex list-none gap-4">
+          <li class="border border-slate-50/10 rounded-md px-3 hover:bg-slate-900/10 cursor-pointer capitalize">about</li>
+          <li class="border border-slate-50/10 rounded-md px-3 hover:bg-slate-900/10 cursor-pointer capitalize">pricing</li>
+        </nav>
+        <div>
+          <button class="border border-slate-50/10 rounded-md px-3 hover:bg-slate-900/10 cursor-pointer">Login</button>
+        </div>
+      </div>
+    </header>
+    <div id="root" class="py-4 flex-row justify-center items-center"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

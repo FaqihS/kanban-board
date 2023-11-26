@@ -8,6 +8,7 @@ import {
   Task,
 } from "./utils/data-task";
 
+
 function App() {
   const [tasks, setTasks] = useState<Task[]>(initialTask);
   const column = statuses.map((stat) => {
@@ -39,7 +40,8 @@ function App() {
   };
 
   return (
-    <div className="flex divide-x ">
+
+    <div className="flex justify-center ">
       {column.map((c) => (
         <div
           onDrop={(e) => handleDrop(e, c.status)}
@@ -49,7 +51,7 @@ function App() {
           <h2 className="text-3xl p-2 capitalize font-bold text-gray-500">
             {c.status}
           </h2>
-          <div className={currentHover === c.status ? 'bg-gray-700 h-full' : ''}>
+          <div className={currentHover === c.status ? 'bg-gray-300 h-full z-0 basis-1/2' : 'basis-1/2 h-full relative'}>
 
           {c.tasks.map((t) => (
             

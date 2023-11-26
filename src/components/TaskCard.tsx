@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Task } from "../utils/data-task";
 
+const handleDrag = (e: React.DragEvent<HTMLDivElement>) => {
+  console.log("X: ", e.clientX, "Y: ", e.clientY);
+};
+
 export function TaskCard({
   task,
   updateTask,
@@ -12,8 +16,9 @@ export function TaskCard({
 
   return (
     <div
-      className="bg-gray-50 border rounded-lg px-2 m-2"
+      className="sticky top-5 bg-gray-50 border rounded-lg px-2 m-2 drop-shadow-sm hover:-translate-y-4 hover:drop-shadow-md duration-300 shadow-black  "
       draggable
+      onDrag={(e) => handleDrag(e)}
       onDragStart={(e) => e.dataTransfer.setData("id", task.id)}
     >
       <div className="text-base font-base py-2"></div>
